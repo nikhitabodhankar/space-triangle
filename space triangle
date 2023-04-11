@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace space_triangle
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int star = 3, nol = 1, no, space = -1;
+            while(nol<=4)
+            {
+                //for lhs
+                no = 1;
+                while(no<=star)
+                {
+                    Console.Write("*");
+                    no++;
+                }
+                //for space
+                no = 1;
+                while(no<=space)
+                {
+                    Console.Write(" ");
+                    no++;
+                }
+                //for rhs
+                no = 1;
+                while(no<=star)
+                {
+                    Console.Write("*");
+                    no++;
+                }
+                if (nol == 1)
+                    Console.Write("*");
+                else
+                    star--;
+                space += 2;  //space=space+2
+                nol++;
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+        }
+    }
+}
